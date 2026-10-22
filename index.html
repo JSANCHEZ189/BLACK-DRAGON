@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="es" class="scroll-smooth" style="background-color: #050608; color: #cfd8e3;">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Juan Diego Sánchez | Portafolio Profesional Multimedia</title>
+    <meta name="description" content="Portafolio profesional de Juan Diego Sánchez, Tecnólogo en Producción Multimedia. Diseño gráfico, desarrollo web, branding, fotografía y edición audiovisual de alto rendimiento." />
+    <meta property="og:title" content="Juan Diego Sánchez | Portafolio Profesional Multimedia" />
+    <meta property="og:description" content="Portafolio profesional de Juan Diego Sánchez, Tecnólogo en Producción Multimedia. Diseño gráfico, desarrollo web, branding, fotografía y edición audiovisual de alto rendimiento." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/index.css" />
+  </head>
+  <body style="background-color: #050608; color: #cfd8e3; margin: 0; min-height: 100vh;" class="bg-[#050608] text-[#cfd8e3] font-sans antialiased selection:bg-[#ff4655] selection:text-white">
+    <div id="root">
+      <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background-color: #050608; color: #00d9ff; font-family: monospace; font-size: 14px;">
+        <div style="text-align: center; padding: 20px;">
+          <div style="width: 40px; height: 40px; border: 3px solid rgba(0, 217, 255, 0.2); border-top-color: #00d9ff; border-radius: 50%; animation: spin 1s linear infinite; margin: 0 auto 16px;"></div>
+          <div style="letter-spacing: 2px; font-weight: bold;">INICIALIZANDO PORTAFOLIO...</div>
+          <div style="color: #8f98b2; font-size: 12px; margin-top: 6px;">JUAN DIEGO SÁNCHEZ // AGENT SYSTEM</div>
+        </div>
+      </div>
+      <style>
+        @keyframes spin { to { transform: rotate(360deg); } }
+      </style>
+    </div>
+
+    <!-- 1. Vite Development Server Module (runs when executing 'npm run dev' or 'npm start') -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <!-- 2. Universal Static Fallback: If opened without Vite dev server (e.g. GitHub Pages or double click), loads the pre-compiled bundle seamlessly -->
+    <script>
+      (function() {
+        setTimeout(function() {
+          var root = document.getElementById('root');
+          // If the loader placeholder is still there (meaning /src/main.tsx was not transpiled by a dev server)
+          if (root && root.querySelector('.text-align, [style*="INICIALIZANDO"]')) {
+            console.log('Cargando bundle estático compilado...');
+            var script = document.createElement('script');
+            script.type = 'module';
+            script.src = './assets/index.js';
+            document.body.appendChild(script);
+          }
+        }, 300);
+      })();
+    </script>
+  </body>
+</html>
